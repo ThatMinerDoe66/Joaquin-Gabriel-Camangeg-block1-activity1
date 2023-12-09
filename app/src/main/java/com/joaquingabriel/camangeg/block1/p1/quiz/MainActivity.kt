@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     private lateinit var firstPass: EditText
@@ -23,8 +24,17 @@ class MainActivity : AppCompatActivity() {
         checkAnswers = findViewById(R.id.checkAnswers)
 
         checkAnswers.setOnClickListener{
-            val intent = Intent(this,Main
+            val x = firstPass.text.toString().toIntOrNull()
+            val y = secondPass.text.toString().toIntOrNull()
+            val z = thirdPass.text.toString().toIntOrNull()
 
-
+            if (x == 5318008 && y == 177013 && z == 911){
+                val intent = Intent(this,MainActivity2::class.java)
+                startActivity(intent)
+            }
+            else {
+                val toast = Toast.makeText(this, "Insert the right passwords!", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 }
