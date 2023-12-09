@@ -5,6 +5,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.Toast
 
 class MainActivity2 : AppCompatActivity() {
     private lateinit var imageLink: ImageView
@@ -24,5 +25,6 @@ class MainActivity2 : AppCompatActivity() {
         val youtubeVideoUrl = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(youtubeVideoUrl))
         startActivity(intent)
+        val toast = Toast.makeText(this, "Tap me!", Toast.LENGTH_SHORT).show()
     }
 }
