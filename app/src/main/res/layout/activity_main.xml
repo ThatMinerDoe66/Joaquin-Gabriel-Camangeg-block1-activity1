@@ -7,12 +7,75 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Guess the password"
+        android:textSize="40dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07" />
+
+    <TextView
+        android:id="@+id/textHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Use the hints below to unlock the app's secret!"
+        android:textSize="18dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTitle"
+        app:layout_constraintVertical_bias="0.039" />
+
+    <EditText
+        android:id="@+id/firstPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:hint="7 numbers funny on a calculator"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@+id/textHint" />
+
+    <EditText
+        android:id="@+id/secondPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Emergence code"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@+id/firstPass" />
+
+    <EditText
+        android:id="@+id/thirdPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Towers fell this day"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@+id/secondPass" />
+
+    <Button
+        android:id="@+id/checkAnswers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:text="CHECK ANSWERS"
+        android:textSize="25dp"
+        app:layout_constraintTop_toBottomOf="@id/thirdPass"
+
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
